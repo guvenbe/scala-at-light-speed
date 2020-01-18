@@ -36,6 +36,35 @@ object Expressions extends App {
     i += 1
   }
   //NEVER WRITE THIS AGAIN...That IS imperitive programming
-  //  EVERYTHING IN
+  //  EVERYTHING IN SCALA is a expression
+  val awierValue = (aVariable = 3)  //Unit == void
+  println(awierValue) //Rerturns scala "()"
+
+  // side effects are println, whiles, reassignment
+
+  //Codel blocks
+
+  val aCodeBlock= {
+    val y= 2
+    val z = y + 1
+
+    if (z>2) "hello" else "goodbye"
+  }
+
+  //1. difference between "hello world"  <= is a value of string
+  // vs
+  // println("hello world")    <= return side effect unit
+
+  //2)
+  val someValue  ={
+    2 < 3
+  }
+  println(someValue)
+
+  val someOtherValue = {
+    if(someValue) 239 else 986
+    42
+  }
+  println(someOtherValue)
 
 }
