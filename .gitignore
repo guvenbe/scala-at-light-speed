@@ -1,4 +1,4 @@
-
+../.idea
 # Created by https://www.gitignore.io/api/sbt,java,scala,intellij
 # Edit at https://www.gitignore.io/?templates=sbt,java,scala,intellij
 
@@ -132,4 +132,6 @@ project/plugins/project/
 ### Scala ###
 
 # End of https://www.gitignore.io/api/sbt,java,scala,intellij
+
+
 
