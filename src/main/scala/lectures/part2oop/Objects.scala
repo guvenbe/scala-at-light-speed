@@ -29,7 +29,7 @@ object Objects extends App {
   val person1 = Person
   val person2 = Person
   println(person1 == person2)
-  val bobbie = Person("mary", "john")
+  val bobbie = Person(marry, john)
 
   //Scala Applications = Scala object with
   //def main(arg: Array[String]): Unit
