@@ -1,4 +1,4 @@
-package lectures.part1basics
+package lectures.part2oop
 
 import scala.annotation.tailrec
 
@@ -91,4 +91,3 @@ object Recursion extends App {
   }
     println(fibbionaci(8))
 }
-

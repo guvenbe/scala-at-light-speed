@@ -1,4 +1,4 @@
-package excercises
+package lectures.part2oop
 
 object OOBasicsExcerise extends App {
   val writerBora = new Writer("Bora", "Guven", 1966)
