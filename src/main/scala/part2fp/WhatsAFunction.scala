@@ -51,5 +51,8 @@ trait MyFunction[A,B] {
   println(adder3(4))
   println("cuuried=" + superAdder(3)(4)) //curried functions
 
+
+  val superAdder2 = (x: Int) =>(y:Int)=>x + y
+  println(superAdder2(2)(3))
 }
 
