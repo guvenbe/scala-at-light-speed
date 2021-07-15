@@ -57,10 +57,10 @@ object Sequences extends App {
       collection.updated(r.nextInt(maxCapacity), r.nextInt())
       System.nanoTime() - currnetTime
     }
-    times.sum * 1.0/maxRuns
+    times.sum * 1.0 / maxRuns
   }
 
-  val numbersList = ( 1 to maxCapacity).toList
+  val numbersList = (1 to maxCapacity).toList
   val numbersVector = (1 to maxCapacity).toVector
 
   //keeps reference to tail

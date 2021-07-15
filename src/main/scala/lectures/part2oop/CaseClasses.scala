@@ -1,11 +1,13 @@
 package lectures.part2oop
 
 object CaseClasses extends App {
+
   /*
   equals hascode toString
    */
 
-  case class Person(name: String,  age:Int)
+  case class Person(name: String, age: Int)
+
   // 1 class parameters are fileds
   val jim = new Person("Jim", 34)
   println(jim.name)
@@ -24,7 +26,7 @@ object CaseClasses extends App {
 
   //5 CC have companion object
   val thePerson = Person
-  val mary =Person("Mary", 23)
+  val mary = Person("Mary", 23)
 
   //6 CC are serializable
   //Akka

@@ -22,11 +22,11 @@ object AnonymousFunctions extends App {
   }
 
   //MOAR syntactic sugar
-  val niceIncrementer2: Int => Int= x=> x + 1
+  val niceIncrementer2: Int => Int = x => x + 1
   val niceIncrementer: Int => Int = _ + 1 //equivalent to x=> x + 1
 
   val niceAdder: (Int, Int) => Int = (a, b) => a + b
-  val niceAdder2: (Int, Int) => Int =  _ + _ //equivalent to (a, b) => a + b
+  val niceAdder2: (Int, Int) => Int = _ + _ //equivalent to (a, b) => a + b
 
   /*
   1) Mylist: replace all FunctionX calls woth lambdas

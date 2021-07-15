@@ -80,7 +80,7 @@ object Recursion extends App {
   println(isPrime(529))
 
   def fibbionaci(n: Int): Int = {
-    def fiboTailRec(i: Int, last: Int, nextToLast: Int):Int =
+    def fiboTailRec(i: Int, last: Int, nextToLast: Int): Int =
       if (i >= n) last
       else fiboTailRec(i + 1, last + nextToLast, last)
 
@@ -89,5 +89,6 @@ object Recursion extends App {
 
 
   }
-    println(fibbionaci(8))
+
+  println(fibbionaci(8))
 }

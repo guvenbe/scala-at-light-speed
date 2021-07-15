@@ -63,5 +63,4 @@ object MapFlatmapFilterFor extends App {
    */
 
 
-
 }

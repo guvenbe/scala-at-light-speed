@@ -8,7 +8,7 @@ object PatternMatching extends App {
     case 1 => "first"
     case 2 => "second"
     case 3 => "third"
-    case _=> anInteger + "th"
+    case _ => anInteger + "th"
   }
   //PM is an expression
   println(order)
@@ -24,7 +24,7 @@ object PatternMatching extends App {
   println(personGreeting)
 
   // deconstructing tuples
-  val aTuple = ("Bon Jovi" , "Rock")
+  val aTuple = ("Bon Jovi", "Rock")
   val bandDescription = aTuple match {
     case (band, genre) => s"$band belong to the genre $genre"
     case _ => "I don't know what you are talking about"
@@ -32,9 +32,9 @@ object PatternMatching extends App {
 
   println(bandDescription)
 
-  val aList = List(1,2,3)
+  val aList = List(1, 2, 3)
   val listDescription = aList match {
-    case List(_,2,_) => "List constains 2 in it's second position"
+    case List(_, 2, _) => "List constains 2 in it's second position"
     case _ => "unknown list"
   }
   // if PM doesn't match anything, it will throw a match error

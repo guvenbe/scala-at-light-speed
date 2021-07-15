@@ -1,4 +1,5 @@
 package lectures.part2oop
+
 import scala.language.postfixOps
 
 object MethodNotations extends App {
@@ -12,15 +13,18 @@ object MethodNotations extends App {
     def +(nickName: String): Person = new Person(s"$name ($nickName)", favoriteMovie)
 
     def unary_! : String = s"$name, what the heck?!"
-    def unary_+ : Person = new Person(name, favoriteMovie, age+1)
+
+    def unary_+ : Person = new Person(name, favoriteMovie, age + 1)
 
     def isAlive: Boolean = true
 
     def apply(): String = s"Hi, my name is $name and I like $favoriteMovie"
-    def apply(times: Int):String = s"$name watched $favoriteMovie $times times"
+
+    def apply(times: Int): String = s"$name watched $favoriteMovie $times times"
 
     def learns(subject: String): String = s"$name learns $subject"
-    def learnsScala:String = learns("scala")
+
+    def learnsScala: String = learns("scala")
 
   }
 
@@ -57,10 +61,9 @@ object MethodNotations extends App {
 
   println((marry + "the rockstar") ())
   println((marry + "the rockstar").apply())
-  println((+ marry).age)
+  println((+marry).age)
   println(marry learnsScala)
   println(marry(10))
-
 
 
 }

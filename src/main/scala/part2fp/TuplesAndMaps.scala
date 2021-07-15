@@ -114,27 +114,29 @@ object TuplesAndMaps extends App {
   println(mostFriends(testNet))
 
   def nPeopleWithNoFriends(network: Map[String, Set[String]]): Int =
-    //network.view.filterKeys(k => network(k).size == 0).size
-    //network.view.filterKeys(k=> network.isEmpty).size
-    //network.filter(pair =>pair._2.isEmpty).size
+  //network.view.filterKeys(k => network(k).size == 0).size
+  //network.view.filterKeys(k=> network.isEmpty).size
+  //network.filter(pair =>pair._2.isEmpty).size
     network.filter(_._2.isEmpty).size
 
   println(nPeopleWithNoFriends(testNet))
 
-  def socialConnection(network: Map[String, Set[String]], a: String, b: String): Boolean ={
+  def socialConnection(network: Map[String, Set[String]], a: String, b: String): Boolean = {
     //breadth search first
     @tailrec
-    def bfs(target: String, consideredPeople: Set[String], discoveredPeople: Set[String]): Boolean ={
+    def bfs(target: String, consideredPeople: Set[String], discoveredPeople: Set[String]): Boolean = {
       if (discoveredPeople.isEmpty) false
       else {
         val person = discoveredPeople.head
         if (person == target) true
-        else if(consideredPeople.contains(person)) bfs(target, consideredPeople, discoveredPeople.tail)
-        else bfs(target, consideredPeople + person,discoveredPeople.tail ++ network(person))
+        else if (consideredPeople.contains(person)) bfs(target, consideredPeople, discoveredPeople.tail)
+        else bfs(target, consideredPeople + person, discoveredPeople.tail ++ network(person))
       }
     }
+
     bfs(b, Set(), network(a) + a)
   }
+
   println(socialConnection(testNet, "Mary", "Jim"))
   println(socialConnection(network, "Mary", "Bob"))
 }

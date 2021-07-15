@@ -55,6 +55,7 @@ class Counter(val count: Int = 0) {
     println("incrementing")
     new Counter(count + 1)
   }
+
   def dec = {
     println("decrementing")
     new Counter(count - 1)

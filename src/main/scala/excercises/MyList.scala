@@ -40,7 +40,7 @@ abstract class MyList[+A] {
 
   def zipWith[B, C](list: MyList[B], zip: (A, B) => C): MyList[C]
 
-  def fold[B](start: B)(operator: (B,A) => B):B
+  def fold[B](start: B)(operator: (B, A) => B): B
 }
 
 case object Empty extends MyList[Nothing] {
@@ -65,7 +65,7 @@ case object Empty extends MyList[Nothing] {
     if (!list.isEmpty) throw new RuntimeException("Lists do not have same length")
     else Empty
 
-  def fold[B](start: B)(operator: (B,Nothing) => B):B = start
+  def fold[B](start: B)(operator: (B, Nothing) => B): B = start
 
   //higher order function
   def flatMap[B](transformer: Nothing => MyList[B]): MyList[B] = Empty
@@ -158,7 +158,7 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
   =[].fold(60 (+)
   =6
    */
-  def fold[B](start: B)(operator: (B,A) => B):B = {
+  def fold[B](start: B)(operator: (B, A) => B): B = {
     t.fold(operator(start, h))(operator)
   }
 }
@@ -232,12 +232,12 @@ object ListTest extends App {
   listOfIntegers.foreach(x => println(x))
   println(listOfIntegers.sort((x, y) => y - x))
   println(anotherListOfIntegers.zipWith[String, String](listOfStrings, _ + "-" + _))
-  println(listOfIntegers.fold(0)(_ +_))
+  println(listOfIntegers.fold(0)(_ + _))
 
   val combinations = for {
     n <- listOfIntegers
-    string <-listOfStrings
-  }yield n + "-" + string
+    string <- listOfStrings
+  } yield n + "-" + string
 
   println(combinations)
 

@@ -36,18 +36,18 @@ object Basics extends App {
 
   // define a function
 
-  def myFunction( x: Int, y: Int): String = y + " " + x
+  def myFunction(x: Int, y: Int): String = y + " " + x
 
   // Or as code block
 
-  def myFunction2( x: Int, y: Int): String={
+  def myFunction2(x: Int, y: Int): String = {
     y + " " + x
   }
 
   // recursive function
-  def factorial(n: Int): Int={
-    if (n<=1) 1
-    else n * factorial(n-1)
+  def factorial(n: Int): Int = {
+    if (n <= 1) 1
+    else n * factorial(n - 1)
 
     /*
     factorial(5) = 5 * factorial(4) = 5 * 24 = 120
@@ -69,6 +69,7 @@ object Basics extends App {
     n
 
   }
+
   // type of SIDE  EFFECTS
   println("I love Scala")
 

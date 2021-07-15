@@ -8,8 +8,9 @@ object Objects extends App {
     val N_EYES = 2
 
     def canFly: Boolean = false
+
     //factory ,ethod
-    def apply(mother: Person, father: Person):Person = new Person("Bobbie")
+    def apply(mother: Person, father: Person): Person = new Person("Bobbie")
   }
 
   class Person(val name: String) {

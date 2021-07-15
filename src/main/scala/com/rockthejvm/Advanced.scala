@@ -49,10 +49,10 @@ object Advanced extends App {
   /**
    * Evaluate something on another thread
    * (asyncronous programming
-   * */
+   **/
 
 
-  val aFuture = Future{ //Future.apply
+  val aFuture = Future { //Future.apply
     println("Loading...")
     Thread.sleep(1000)
     println("I have computed a value.")
@@ -66,21 +66,21 @@ object Advanced extends App {
 
   /**
    * Implicits basics
-   * */
+   **/
 
-   //#1: implicit arguments
-  def aMethodWithImplicitArgs(implicit arg: Int)= arg +1
+  //#1: implicit arguments
+  def aMethodWithImplicitArgs(implicit arg: Int) = arg + 1
+
   implicit val myImplicitInt = 46
   println(aMethodWithImplicitArgs) //aMethodWithImplicitArgs(myImplicitInt)
 
   //#2 implicit conversions
-  implicit class MyRichInteger(n: Int){
+  implicit class MyRichInteger(n: Int) {
     def isEven() = n % 2 == 0
   }
 
   println(23.isEven()) // new MyRichInteger(23).isEven()
   //Use this carefully
-
 
 
 }

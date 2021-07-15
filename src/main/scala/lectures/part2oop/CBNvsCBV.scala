@@ -15,7 +15,7 @@ object CBNvsCBV extends App {
   calledByValue(System.nanoTime())
   calledByName(System.nanoTime())
 
-  def infinite(): Int =  1 + infinite() //cause stack overflow
+  def infinite(): Int = 1 + infinite() //cause stack overflow
   def printFirst(x: Int, y: => Int) = println(x)
 
   //printFirst(infinite(), 34) //Stack overflow

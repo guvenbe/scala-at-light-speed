@@ -1,7 +1,7 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
-    <codeStyleSettings language="JAVA">
-      <option name="SPACE_BEFORE_TYPE_PARAMETER_LIST" value="true" />
-    </codeStyleSettings>
+    <ScalaCodeStyleSettings>
+      <option name="USE_SCALADOC2_FORMATTING" value="true" />
+    </ScalaCodeStyleSettings>
   </code_scheme>
 </component>

@@ -3,7 +3,7 @@ package lectures.part2oop
 
 import playground.{PrinceCharming, Cinderella => Princess}
 import java.util.Date
-import java.sql.{Date=>SqlDate}
+import java.sql.{Date => SqlDate}
 
 object PakagingAndImports extends App {
 
@@ -29,12 +29,10 @@ object PakagingAndImports extends App {
   val date = new Date()
   val sqlDate = new SqlDate(2018, 5, 5)
 
-//  default imports
+  //  default imports
   //java.lang - String, object, exception
   //scala - Int, Nothing, Function
   //scala.Predef - println, ???
-
-
 
 
 }

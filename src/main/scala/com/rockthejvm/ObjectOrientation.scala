@@ -1,20 +1,24 @@
 package com.rockthejvm
 
 object ObjectOrientation extends App {
-  class Animal{
+
+  class Animal {
     //define fields
-    val age: Int =0
+    val age: Int = 0
+
     //define methods
     def eat() = println("I'm eating as an Animal")
 
   }
 
   val anAnimal = new Animal
+
   class Dog extends Animal
 
-  class Dog2(val name: String) extends Animal{
+  class Dog2(val name: String) extends Animal {
     override def eat(): Unit = println("I'm eating as a dog")
   }
+
   val aDog = new Dog2("Lassie")
 
   //Constructor argument are not fields: need to put a val before the constructor argument
@@ -28,8 +32,8 @@ object ObjectOrientation extends App {
   //abstract class
 
   abstract class WalkingAnimal {
-    val hasLegs =true //by default public can restrict by adding protected(class and all it's decendents have access or private(only class has access)
-    def walk() : Unit
+    val hasLegs = true //by default public can restrict by adding protected(class and all it's decendents have access or private(only class has access)
+    def walk(): Unit
   }
 
   // "interface" = ultimate abstract type
@@ -55,7 +59,7 @@ object ObjectOrientation extends App {
   aCroc ?! "What if we could fly"
 
   //operators in scala are actually methods
-  val basicMath= 1 + 2
+  val basicMath = 1 + 2
   val anotherBasicMath = 1.+(2)
 
   //anonymous
@@ -65,23 +69,25 @@ object ObjectOrientation extends App {
   }
 
 
-/*
-//   Same as above: what you tell the compiler
-   class Carnivore_Anonymous_35728 extends Carnivore{
-    override def eat(animal: Animal): Unit = println("I am a dinosaur I can pretty much eat anything")
+  /*
+  //   Same as above: what you tell the compiler
+     class Carnivore_Anonymous_35728 extends Carnivore{
+      override def eat(animal: Animal): Unit = println("I am a dinosaur I can pretty much eat anything")
 
-  }
+    }
 
-  val dinosour = new Carnivore_Anonymous_35728
-  */
+    val dinosour = new Carnivore_Anonymous_35728
+    */
 
 
   // Singleton object
   object MySingleton {
     // the only instance of the MySingleton type
     val mySpecialValue = 53278
-    def mySpecialMethod() : Int=5327
-    def apply(x: Int): Int= x+1 //S[ecial method
+
+    def mySpecialMethod(): Int = 5327
+
+    def apply(x: Int): Int = x + 1 //S[ecial method
 
   }
 
@@ -89,13 +95,13 @@ object ObjectOrientation extends App {
   MySingleton.apply(65)
   MySingleton(65) //Calls apply equivalent to MySingleton.apply(65)
 
-  object Animal{
+  object Animal {
     //Companions can access each other'sprivate field/methods
     //singleton Animal and instances of Animals are diferent things
     val canLiveIndefinetly = false
   }
 
-  val animalsCanLiveForEver = Animal.canLiveIndefinetly  //"static" fields methods
+  val animalsCanLiveForEver = Animal.canLiveIndefinetly //"static" fields methods
 
   /*
     case class - lightweight data structures with some biolerplate
@@ -117,20 +123,21 @@ object ObjectOrientation extends App {
     x.length
   } catch {
     case e: Exception => "some faulty error message"
-  }finally {
+  } finally {
     // execute some code no matter what
   }
 
   // generics
-  abstract class MyList[T]{
+  abstract class MyList[T] {
     def head: T
+
     def tail: MyList[T]
   }
 
-  val aList: List[Int] = List(1,2,3) //List.apply(1,2,3)
+  val aList: List[Int] = List(1, 2, 3) //List.apply(1,2,3)
   val first = aList.head //Int
   val rest = aList.tail
-  val  aStringList = List("hello", "Scala")
+  val aStringList = List("hello", "Scala")
   val firstString = aStringList.head
 
   //Point #1: in scala we usually operate with IMMUTABLE values

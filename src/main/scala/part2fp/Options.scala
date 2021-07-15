@@ -65,8 +65,8 @@ object Options extends App {
   }
 
   //try to establish a connection, if so - print the connection methis
-  val host = config.get("host")  //option of string
-  val port = config.get("port")  //option of string
+  val host = config.get("host") //option of string
+  val port = config.get("port") //option of string
 
   /*
 if (h!= null)
@@ -83,7 +83,7 @@ if (h!= null)
       return c.connect
     return null
    */
-  val connectionStatus = connection.map(c=>c.connect)
+  val connectionStatus = connection.map(c => c.connect)
   //if (connectionStatus == null) println(None) else print (Some(connectionstatus.get))
   println(connectionStatus)
 
@@ -104,7 +104,7 @@ if (h!= null)
     )
 
   //for-comprehensions
-  val forConnectionStatus = for{
+  val forConnectionStatus = for {
     host <- config.get("host")
     port <- config.get("port")
     connection <- Connection(host, port)

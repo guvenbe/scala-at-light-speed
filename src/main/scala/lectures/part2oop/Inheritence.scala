@@ -1,16 +1,16 @@
 package lectures.part2oop
 
 
-
 object Inheritence extends App {
 
   //single class inheritence
   sealed class Animal {
     val creatureType = "wild"
+
     def eat = println("nomnom")
   }
 
-  class Cat extends  Animal{
+  class Cat extends Animal {
     def crunch = {
       eat
       println(" crunch, crunch")
@@ -21,14 +21,15 @@ object Inheritence extends App {
   cat.eat
 
   //constructors
-  class Person(name: String, age: Int){
-    def this(name: String) =this(name, 0)
+  class Person(name: String, age: Int) {
+    def this(name: String) = this(name, 0)
 
   }
+
   class Adult(name: String, age: Int, idCard: String) extends Person(name)
 
   //overrding
-  class Dog(override val creatureType: String) extends Animal{
+  class Dog(override val creatureType: String) extends Animal {
     //override val creatureType: String = "domestic"
     override def eat: Unit = {
       super.eat

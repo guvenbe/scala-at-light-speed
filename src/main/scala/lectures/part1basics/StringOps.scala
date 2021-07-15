@@ -12,14 +12,14 @@ object StringOps extends App {
 
   val anMumberString = "2"
   val aNumber = anMumberString.toInt
-  println('a' +: anMumberString :+'z')
+  println('a' +: anMumberString :+ 'z')
   println(str.reverse)
   println(str.take(2))
 
   //Scala-specific: String interpolators
 
   //S-interpolators
-  val name ="David"
+  val name = "David"
   val age = 12
   val greeting = s"Hello, my name is $name and I am $age"
   val anotherGreeting = s"Hello, my name is $name will be turning ${age + 1} year old"
@@ -27,7 +27,7 @@ object StringOps extends App {
   println(anotherGreeting)
 
   //F-interpolators
-  val speed=  1.2f
+  val speed = 1.2f
   val myth = f"$name%s can eat $speed%2.2f burger per minute"
   println(myth)
 

@@ -10,5 +10,5 @@ public class javaPlayGround {
 }
 
 class Person {
-    public static final int N_EYES=2;
+    public static final int N_EYES = 2;
 }
